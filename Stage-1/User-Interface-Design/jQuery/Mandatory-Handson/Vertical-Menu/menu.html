@@ -1,0 +1,69 @@
+<!-- DO NOT ALTER THIS FILE -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+
+    <style>
+        .men_ex {
+            border-radius: 5px;
+        }
+        
+        .men_ex ul {
+            margin: 0;
+            padding: 0;
+            width: 185px;
+            list-style-type: none;
+        }
+        
+        .men_ex ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10.5px 11px;
+            background-color: #DA8119;
+            display: block;
+            border-bottom: solid 1px #000;
+        }
+        
+        .men_ex ul li a:visited {
+            color: white;
+        }
+        
+        .men_ex ul li a:hover,
+        .men_ex ul li .current {
+            color: #000;
+            background-color: #FBE9AC;
+        }
+        
+        .show_hide {
+            position: fixed;
+            margin: 30px 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="men_ex">
+        <ul id="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <a href="#" id="each_ex">Execute each method</a>
+    <div id="msg_ex"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+
+</html>

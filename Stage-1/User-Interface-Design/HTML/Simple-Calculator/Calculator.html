@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+
+<body>
+    <font color="blue" size="20">Calculator</font> <br/>
+    <img src="calculator.jpg" alt="calculator" height="300px" width="400px"> <br/>
+    <table>
+        <tr>
+            <td>
+                <label for="input1">Input1</label>
+            </td>
+            <td>
+                <input id="input1" type="number" name="input1">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="input2">Input2</label>
+            </td>
+            <td>
+                <input id="input2" type="number" name="input2">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="operation">Select Operation</label>
+            </td>
+            <td>
+                <select id="operation" name="operation">
+                    <option value="Select..">Select..</option>
+                    <option value="ADD">ADD</option>
+                    <option value="SUBTRACT">SUBTRACT</option>
+                    <option value="MULTIPLY">MULTIPLY</option>
+                    <option value="DIVIDE">DIVIDE</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img id="submit" src="calc.jpg" alt="submit" height="80px" width="80px">
+            </td>
+            <td>
+                <img id="reset" src="reset.jpg" alt="reset" height="80px" width="80px">
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

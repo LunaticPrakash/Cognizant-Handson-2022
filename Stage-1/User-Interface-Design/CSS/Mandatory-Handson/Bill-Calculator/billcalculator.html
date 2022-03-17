@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Calculator</title>
+    <link rel="stylesheet" href="billcalc.css">
+</head>
+
+<body>
+    <h1>Bill Calculator</h1>
+    <form onsubmit="return calculateTotalPrice();">
+        <table>
+            <tr>
+                <td>
+                    <label for="productName">Product Name</label>
+                </td>
+                <td>
+                    <input id="productName" type="text" placeholder="Product Name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="price">Product Price in Rs.</label>
+                </td>
+                <td>
+                    <input id="price" type="number" placeholder="Product Price" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="qty">Quantity</label>
+                </td>
+                <td>
+                    <input id="qty" type="number" min="1" placeholder="Enter Quantity" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="totalprice">Total Price in Rs.</label>
+                </td>
+                <td>
+                    <output id="totalprice" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input id="submit" type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function calculateTotalPrice(){
+            const price = document.getElementById("price").value;
+            const qty = document.getElementById("qty").value;
+            document.getElementById("totalprice").innerHTML = price*qty;
+            return false;
+        }
+    </script>
+</body>
+
+</html>

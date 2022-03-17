@@ -1,0 +1,1 @@
+cp -r mydir/colors/basic mydir/colors/blended  mydir/shape/

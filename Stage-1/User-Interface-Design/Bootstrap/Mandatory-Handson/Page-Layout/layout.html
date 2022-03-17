@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-ottom and rounded borders */
+        
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        
+        .row.content {
+            height: 450px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+
+        <div class="row content">
+
+
+            <!-- FILL NECESSARY CODE FOR COLUMN 1 HERE -->
+
+            <div id="col1" class="col-sm-2 sidenav">
+                <h4> Our Branches </h4>
+                <br>
+                <p>394 SW. Courtland Drive Egg Harbor Township, NJ 08234
+                </p><br><br>
+                <p>76 East Middle River Street Methuen, MA 01844</p>
+
+            </div>
+
+            <!-- FILL NECESSARY CODE FOR COLUMN 2 HERE -->
+            <div id="col2" class="col-sm-8 text-left">
+
+                <h1>Welcome</h1>
+                <p>You know, little of this, little of that. Do you have any kalhua? I know how he likes to present himself; Father's weakness is vanity. Hence the plot. Please see him, Jeffrey. He's a good man. And thorough. They call Los Angeles the City
+                    of Angels. I didn't find it to be that exactly, but I'll allow as there are some nice folks there. 'Course, I can't say I seen London, and I never been to France, and I ain't never seen no queen in her damn undies as the fella says.
+                    But I'll tell you what, after seeing Los Angeles and thisahere story I'm about to unfold wal, I guess I seen somethin' ever' bit as stupefyin' as ya'd see in any a those other places, and in English too, so I can die with a smile on
+                    my face without feelin' like the good Lord cheated me. </p>
+
+
+                <hr>
+
+                <img class="col-md-offset-2" src="img3.png" alt="3" />
+
+
+            </div>
+
+            <!-- FILL necessary CODE FOR COLUMN 3 HERE -->
+            <div id="col3" class="col-sm-2 sidenav">
+
+                <h4>Categories</h4>
+                <div class="well">
+                    <a href="#">Advice from Our Experts</a>
+                </div>
+
+                <div class="well">
+                    <a href="#"> Our Blogs</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FILL YOUR CODE FOR SETTING THE BELOW ELEMENTS AS FOOTER HERE -->
+    <footer class="container-fluid text-center">
+        <p>Text placeholders courtesy of <a href="http://www.trinqet.com/">The TrinQet Inc.</a></p>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+ <!-- FILL ONLY THE SPECIFIED PART ALONE -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Bootstrap 3 Responsive Navbar</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+	.navbar{
+		margin-top: 5px;
+	}
+	table{
+	position:absolute;
+         
+           left:50%;
+	}
+	.navbar-inverse {
+    		background-color:#546d88;
+    		border-color: #428BCA;
+	}
+
+	.navbar-inverse .navbar-nav > .active > a, 
+	.navbar-inverse .navbar-nav > .active > a:focus, 
+	.navbar-inverse .navbar-nav > .active > a:hover {
+
+    		color: #fff;
+    		background-color: #336699;
+
+	}
+	
+	
+</style>
+</head> 
+
+<header class="container">
+
+
+   <!-- FILL YOUR CODE FOR NAVIGATION BAR HERE -->
+   <div class="navbar navbar-inverse">
+       <div class="container">
+           <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                   <li class="active"><a href="#">Home</a></li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                   <li><a href="#">Login</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+
+
+</header>
+
+ <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="mt-5">Track the Payment - TrackIt</h2>
+
+
+	  <ul class="list-unstyled">
+          <li>Allows you to track your Bill Payment</li>
+            <li>Help to automate delivery for customers with no need to install or download anything</li>
+	    <li>A customizable tool for ensuring that any payments you have to make are paid on time.</li>
+	   </ul>
+	<br>
+
+  	<h4 >Greater comfort. Stronger performance. Improved Security.  No Compromise</h4>
+	<br>
+ 	     
+        </div> 	
+      </div>	
+
+    </div>
+
+
+
+  <div class="col-md-6">
+
+
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Bill</th>
+      <th scope="col">Payment Date</th>
+      <th scope="col">Payment Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="warning">
+      <td>1</td>
+      <td>Credit Card</td>
+      <td>05/07/2018</td>
+      <td>Pending</td>
+    </tr>
+    <tr class="success">
+      <td>2</td>
+      <td>Internet</td>
+      <td>05/07/2018</td>
+      <td>Paid</td>
+    </tr>
+    <tr class="warning">
+      <td>3</td>
+      <td>Electricity</td>
+      <td>03/09/2018</td>
+      <td>Pending</td>
+    </tr>
+    <tr class="danger">
+        <td>4</td>
+        <td>Telephone</td>
+        <td>05/07/2018</td>
+        <td>Due</td>
+    </tr>
+  </tbody>
+</table>
+
+ </div>
+
+
+</body>
+</html>   
+
+
+
+            
