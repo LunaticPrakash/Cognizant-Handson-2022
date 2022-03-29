@@ -1,2 +1,2 @@
-ALTER TABLE hotel_details
-CHANGE rating hotel_rating INT;
+ALTER TABLE CUSTOMERS
+MODIFY CUSTOMER_ID INT;
