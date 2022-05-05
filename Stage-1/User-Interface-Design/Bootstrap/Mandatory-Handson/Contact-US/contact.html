@@ -1,5 +1,3 @@
-<!-- DO NOT CHANGE THE TEMPLATE. FILL ONLY THE SPECIFIED PART ALONE -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,7 +102,151 @@
                                     <li><a href="#">Robotics</a></li>
                                     <li><a href="#">Learning</a></li>
                                     <li><a href="#">Air Sports</a></li>
-                                    <li class="divider"></li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="disabled"><a href="#">Meditation</a></li>
+                                </ul>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Message</label>
+                        <div class="col-md-10">
+                            <textarea cols="40" rows="6" class="form-control" placeholder="e.g. The Message"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">
+
+
+                            <!-- WRITE YOUR CODE FOR 'SUBMIT' BUTTON -->
+
+                            <input type="submit" class="btn btn-primary" value="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script>
+        $("#reasonDropdown li a").on("click", function() {
+            var reason = $(this).text();
+            $("#selectButton").text(reason);
+        });
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trinqet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+        .navbar-default {
+            background-color: #546d88;
+            border-color: #428BCA;
+            color: #FFFFFF;
+        }
+        
+        .navbar-nav>li>a:hover,
+        .navbar-default .navbar-nav>li>a:focus {
+            color: #FFFFFF;
+            background-color: #336699;
+        }
+        
+        .navbar-default .navbar-nav>li>a {
+            color: #FFFFFF;
+        }
+        
+        body {
+            font-family: "Cabin", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.428571429;
+            background-color: #E3EAED;
+            color: #616161;
+            margin-top: 70px;
+        }
+        
+        h1 {
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <header class="container">
+            <div id="menu" class="navbar navbar-default navbar-fixed-top">
+
+                <!-- Collection of nav links, forms, and other content for toggling -->
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li class="active"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+        <section id="body" class="container">
+            <div class="page-header">
+                <h1>Contact Us</h1>
+            </div>
+
+            <div class="row">
+                <form class="form-horizontal">
+
+                    <div class="form-group">
+                        <label for="nameInput" class="control-label col-md-2">Your Name</label>
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-chevron-down"></span></span>
+                                <input type="text" name="nameInput" class="form-control" placeholder="e.g. Your Name" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailInput" class="control-label col-md-2">Email</label>
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input type="email" name="emailInput" class="form-control" placeholder="e.g. Your Email" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Leisure Activity</label>
+                        <div class="col-md-10">
+
+
+                            <!--WRITE YOUR CODE FOR 'LEISURE ACTIVITY OPTIONS' -->
+
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="selectButton">Select One...</button>
+                                <button class="btn btn-info dropdown-toogle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+
+                                <ul class="dropdown-menu" id="reasonDropdown">
+                                    <li><a href="#">Robotics</a></li>
+                                    <li><a href="#">Learning</a></li>
+                                    <li><a href="#">Air Sports</a></li>
+                                    <li class="dropdown-divider"></li>
                                     <li class="disabled"><a href="#">Meditation</a></li>
                                 </ul>
                             </div>
