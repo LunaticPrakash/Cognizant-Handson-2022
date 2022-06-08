@@ -1,0 +1,369 @@
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git branch
+* master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git branch GitNewBranch
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git branch
+  GitNewBranch
+* master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git checkout GitNewBranch
+Switched to branch 'GitNewBranch'
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git branch
+* GitNewBranch
+  master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ vi file2.txt
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git status
+On branch GitNewBranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git add .
+warning: LF will be replaced by CRLF in file2.txt.
+The file will have its original line endings in your working directory
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git commit -m "added file2.txt"
+[GitNewBranch 928e759] added file2.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git status
+On branch GitNewBranch
+nothing to commit, working tree clean
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git push origin GitNewBranch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 80.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'GitNewBranch' on GitHub by visiting:
+remote:      https://github.com/prasaddharani/GitDemo/pull/new/GitNewBranch
+remote:
+To https://github.com/prasaddharani/GitDemo.git
+ * [new branch]      GitNewBranch -> GitNewBranch
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git log --oneline GitNewBranch
+928e759 (HEAD -> GitNewBranch, origin/GitNewBranch) added file2.txt
+b4885e7 (origin/master, master) first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git log --oneline master
+b4885e7 (origin/master, master) first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitNewBranch)
+$ git checkout master
+Switched to branch 'master'
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git ls-l files
+git: 'ls-l' is not a git command. See 'git --help'.
+
+The most similar command is
+        ls-files
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git merge GitNewBranch
+Updating b4885e7..928e759
+Fast-forward
+ file2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline master
+928e759 (HEAD -> master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 (origin/master) first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/prasaddharani/GitDemo.git
+   b4885e7..928e759  master -> master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git branch
+  GitNewBranch
+* master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git branch GitWork
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git branch
+  GitNewBranch
+  GitWork
+* master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git checkout GitWork
+Switched to branch 'GitWork'
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ vi hello.xml
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git log --oneline GitWork
+928e759 (HEAD -> GitWork, origin/master, origin/GitNewBranch, master, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git log --oneline master
+928e759 (HEAD -> GitWork, origin/master, origin/GitNewBranch, master, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git add .
+warning: LF will be replaced by CRLF in hello.xml.
+The file will have its original line endings in your working directory
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git commit -m "added hello.xml"
+[GitWork b448ba4] added hello.xml
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git log --oneline GitWork
+b448ba4 (HEAD -> GitWork) added hello.xml
+928e759 (origin/master, origin/GitNewBranch, master, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git log --oneline master
+928e759 (origin/master, origin/GitNewBranch, master, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git checkout master
+Switched to branch 'master'
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ vi hello.xml
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git add .
+warning: LF will be replaced by CRLF in hello.xml.
+The file will have its original line endings in your working directory
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git commit -m "added hello.xml from master branch"
+[master 0c2c66d] added hello.xml from master branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline master
+0c2c66d (HEAD -> master) added hello.xml from master branch
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline GitWork
+b448ba4 (GitWork) added hello.xml
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git diff
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git diff hello.xml
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ vi hello.xml
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git diff hello.xml
+warning: LF will be replaced by CRLF in hello.xml.
+The file will have its original line endings in your working directory
+diff --git a/hello.xml b/hello.xml
+index 7a7865a..94af4cc 100644
+--- a/hello.xml
++++ b/hello.xml
+@@ -1 +1,2 @@
+ Data added from master branch
++modified file from master branch
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log -oneline -graph -decorate -al
+error: did you mean `--decorate` (with two dashes)?
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log -oneline -graph --decorate -al
+error: switch `l' requires a value
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log -oneline --graph --decorate -al
+error: switch `l' requires a value
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log -oneline --graph --decorate
+fatal: unrecognized argument: -oneline
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline --graph --decorate
+* 0c2c66d (HEAD -> master) added hello.xml from master branch
+* 928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+* b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline master
+0c2c66d (HEAD -> master) added hello.xml from master branch
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git commit -m "modified hello.xml from master"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git add .
+warning: LF will be replaced by CRLF in hello.xml.
+The file will have its original line endings in your working directory
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git commit -m "modified hello.xml from master"
+[master e66e206] modified hello.xml from master
+ 1 file changed, 1 insertion(+)
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline master
+e66e206 (HEAD -> master) modified hello.xml from master
+0c2c66d added hello.xml from master branch
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline GitWork
+b448ba4 (GitWork) added hello.xml
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git checkout GitWork
+Switched to branch 'GitWork'
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (GitWork)
+$ git checkout master
+Switched to branch 'master'
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git merge GitWork
+CONFLICT (add/add): Merge conflict in hello.xml
+Auto-merging hello.xml
+Automatic merge failed; fix conflicts and then commit the result.
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master|MERGING)
+$ cat hello.xml
+<<<<<<< HEAD
+Data added from master branch
+modified file from master branch
+=======
+Data added from GitWork branch
+>>>>>>> GitWork
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master|MERGING)
+$ git log --oneline master
+e66e206 (HEAD -> master) modified hello.xml from master
+0c2c66d added hello.xml from master branch
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      hello.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master|MERGING)
+$ git added
+git: 'added' is not a git command. See 'git --help'.
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master|MERGING)
+$ git add .
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master|MERGING)
+$ git commit -m "hello.xml merged"
+[master dac0d11] hello.xml merged
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git log --oneline master
+dac0d11 (HEAD -> master) hello.xml merged
+e66e206 modified hello.xml from master
+0c2c66d added hello.xml from master branch
+b448ba4 (GitWork) added hello.xml
+928e759 (origin/master, origin/GitNewBranch, GitNewBranch) added file2.txt
+b4885e7 first commit
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ cat hello.xml
+<<<<<<< HEAD
+Data added from master branch
+modified file from master branch
+=======
+Data added from GitWork branch
+>>>>>>> GitWork

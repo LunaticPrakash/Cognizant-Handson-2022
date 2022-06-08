@@ -1,0 +1,85 @@
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git version
+git version 2.30.1.windows.1
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git config --global user.name "Manish Kumar"
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git config --global user.email "manishkumarlps41@gmail.com"
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git config --global --list
+http.sslbackend=openssl
+user.name=Manish Kumar
+user.email=manishkumarlps41@gmail.com
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git init
+Initialized empty Git repository in C:/git-handsons/.git/
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ ls -al
+total 16
+drwxr-xr-x 1 CTS+894221 4096 0 Apr 13 22:20 ./
+drwxr-xr-x 1 CTS+894221 4096 0 Apr 13 22:14 ../
+drwxr-xr-x 1 CTS+894221 4096 0 Apr 13 22:20 .git/
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ echo "Welcome to the version control" >> welcome.txt
+
+CTS+894221@LTIN280843 MINGW64 /c/git-handsons (master)
+$ ls -al
+total 17
+drwxr-xr-x 1 CTS+894221 4096  0 Apr 13 22:21 ./
+drwxr-xr-x 1 CTS+894221 4096  0 Apr 13 22:14 ../
+drwxr-xr-x 1 CTS+894221 4096  0 Apr 13 22:20 .git/
+-rw-r--r-- 1 CTS+894221 4096 31 Apr 13 22:21 welcome.txt
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ cat welcome.txt
+Welcome to the version control
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        welcome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git add welcome.txt
+warning: LF will be replaced by CRLF in welcome.txt.
+The file will have its original line endings in your working directory
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git commit -m "first commit"
+[master (root-commit) b4885e7] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git remote add origin https://github.com/manishkumarc2c/Stage-3-handson
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 252 bytes | 42.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/manishkumarc2c/Stage-3-handson
+ * [new branch]      master -> master

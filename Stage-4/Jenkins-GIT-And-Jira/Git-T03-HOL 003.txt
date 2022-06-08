@@ -1,0 +1,32 @@
+$ git ls-tree -r master
+100644 blob 57bd4b3315d01aa168fa0651079745a69964839f    file2.txt
+100644 blob 1546712f9db891526cf88f59a31c89c49f6fae70    hello.xml
+100644 blob a6144e0633f36528be7ed928860e7d92a02d88f4    welcome.txt
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git ls-remote
+From https://github.com/manishkumarc2c/Stage-3-handson
+928e759f2d6114a2f5ebf843684a6de40c880758        HEAD
+928e759f2d6114a2f5ebf843684a6de40c880758        refs/heads/GitNewBranch
+928e759f2d6114a2f5ebf843684a6de40c880758        refs/heads/master
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git remote add origin master
+error: remote origin already exists.
+
+CTS+894093@LTIN280843 MINGW64 /c/git-handsons (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.31 KiB | 191.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/manishkumarc2c/Stage-3-handson
+   928e759..dac0d11  master -> master
