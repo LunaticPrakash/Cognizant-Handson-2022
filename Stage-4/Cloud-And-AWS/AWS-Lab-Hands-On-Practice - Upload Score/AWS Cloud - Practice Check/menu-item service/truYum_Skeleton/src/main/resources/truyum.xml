@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd" />
+    </bean>
+    
+	<bean id="item1" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="1" />
+		<property name="name" value="sandwich" />
+		<property name="price" value="500" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2020-01-31" />
+            </bean>
+		</property>
+		<property name="category" value="MainCourse" />
+		<property name="freeDelivery" value="true" />
+	</bean>
+	
+	<bean id="item2" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="2" />
+		<property name="name" value="French Fries" />
+		<property name="price" value="60" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2021-01-31" />
+            </bean>
+		</property>
+		<property name="category" value="MainCourse" />
+		<property name="freeDelivery" value="true" />
+	</bean>
+	<bean id="item3" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="3" />
+		<property name="name" value="Burger" />
+		<property name="price" value="65" />
+		<property name="active" value="false" />
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2020-03-31" />
+            </bean>
+		</property>
+		<property name="category" value="Starters" />
+		<property name="freeDelivery" value="false"/>
+	</bean>
+
+	<bean id="menuItemList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="item1"></ref>
+				<ref bean="item2"></ref>
+				<ref bean="item3"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
